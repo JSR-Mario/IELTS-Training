@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { PenTool, BookOpen, History, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { PenTool, BookOpen, ArrowRight, CheckCircle2 } from 'lucide-react';
 
 interface HomePageProps {
   onNavigate: (tab: 'writing' | 'reading' | 'submissions') => void;
@@ -7,7 +7,7 @@ interface HomePageProps {
 
 export const HomePage: FC<HomePageProps> = ({ onNavigate }) => {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-8">
       {/* Hero Section */}
       <div className="bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800">
         <div className="max-w-3xl">
@@ -134,70 +134,6 @@ export const HomePage: FC<HomePageProps> = ({ onNavigate }) => {
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
-        </div>
-      </div>
-
-      {/* How Workflow Works */}
-      <div className="bg-slate-50 rounded-3xl border border-slate-200 p-8 sm:p-10">
-        <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-indigo-600">Flujo de Trabajo</span>
-          <h3 className="text-2xl font-bold text-slate-900 mt-1">Como funciona la evaluacion</h3>
-          <p className="text-sm text-slate-600 mt-2">
-            La herramienta almacena tus respuestas de forma local para permitir una revision detallada en el chat sin costos de API externa.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-sm">
-              1
-            </div>
-            <h4 className="font-bold text-slate-900 text-sm">Selecciona y redacta</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Elige entre Task 1 o Task 2, inicia el temporizador y redacta tu respuesta cumpliendo el minimo de palabras.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-sm">
-              2
-            </div>
-            <h4 className="font-bold text-slate-900 text-sm">Guarda la sesion</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Presiona "Finish & Save". El archivo se genera inmediatamente en tu repositorio en submissions/.
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-sm">
-              3
-            </div>
-            <h4 className="font-bold text-slate-900 text-sm">Solicita revision</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Copia el mensaje generado o escribe en este chat: "calificame mi ultimo ensayo de Writing".
-            </p>
-          </div>
-
-          <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-            <div className="w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-bold flex items-center justify-center text-sm">
-              4
-            </div>
-            <h4 className="font-bold text-slate-900 text-sm">Reporte de bandas</h4>
-            <p className="text-xs text-slate-600 leading-relaxed">
-              Recibe la calificacion detallada bajo los 4 criterios de IELTS (TR, CC, LR y GRA) junto con correcciones precisas.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 text-center">
-          <button
-            onClick={() => onNavigate('submissions')}
-            className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors cursor-pointer"
-          >
-            <History className="w-4 h-4" />
-            <span>Ver historial de ensayos previos</span>
-            <ArrowRight className="w-3.5 h-3.5" />
-          </button>
         </div>
       </div>
     </div>

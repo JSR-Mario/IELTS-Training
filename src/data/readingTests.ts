@@ -3,11 +3,11 @@ import type { ReadingTest } from '../types/reading';
 export const READING_TESTS: ReadingTest[] = [
   {
     id: 'academic-test-01',
-    title: 'Cambridge Style Academic Practice Test 1',
-    description: 'A full-length 3-passage IELTS Academic Reading examination featuring authentic question types, line-by-line annotations, and band score mapping.',
+    title: 'Cambridge Academic Practice Test 1',
+    description: 'A full 3-passage examination exploring urban agriculture, biomimetic engineering, and linguistic diversity.',
     passages: [
       {
-        id: 'p1',
+        id: 'p1-t1',
         number: 1,
         title: 'The Rise of Urban Agriculture',
         subtitle: 'How modern cities are transforming rooftops, abandoned lots, and vertical towers into hyper-productive food systems.',
@@ -39,7 +39,7 @@ export const READING_TESTS: ReadingTest[] = [
         ],
         questions: [
           {
-            id: 'q1',
+            id: 't1-q1',
             number: 1,
             type: 'true-false-not-given',
             instructions: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE if the statement agrees, FALSE if the statement contradicts, or NOT GIVEN if there is no information on this.',
@@ -49,7 +49,7 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph A'
           },
           {
-            id: 'q2',
+            id: 't1-q2',
             number: 2,
             type: 'true-false-not-given',
             instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
@@ -59,7 +59,7 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph B'
           },
           {
-            id: 'q3',
+            id: 't1-q3',
             number: 3,
             type: 'true-false-not-given',
             instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
@@ -69,28 +69,18 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph C'
           },
           {
-            id: 'q4',
+            id: 't1-q4',
             number: 4,
             type: 'true-false-not-given',
             instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
             text: 'Governments in Asia have provided tax subsidies to lower the cost of vertical farm construction.',
             correctAnswer: 'NOT GIVEN',
-            explanation: 'While Singapore is mentioned as an example of vertical farming location in Paragraph D, there is no mention in the text regarding government subsidies or tax incentives.',
+            explanation: 'While Singapore is mentioned as a location in Paragraph D, there is no mention in the text regarding government subsidies or tax incentives.',
             passageAnchor: 'Paragraph D'
           },
           {
-            id: 'q5',
+            id: 't1-q5',
             number: 5,
-            type: 'true-false-not-given',
-            instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
-            text: 'Vertical farms recycle water that has evaporated and condensed inside the facility.',
-            correctAnswer: 'TRUE',
-            explanation: 'Paragraph D mentions: "utilizing an astonishing 95 percent less water due to continuous internal recycling of condensed transpiration."',
-            passageAnchor: 'Paragraph D'
-          },
-          {
-            id: 'q6',
-            number: 6,
             type: 'sentence-completion',
             instructions: 'Complete the sentences below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
             text: 'The primary operational weakness of vertical farming lies in its enormous _______ consumption.',
@@ -99,8 +89,8 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph E'
           },
           {
-            id: 'q7',
-            number: 7,
+            id: 't1-q6',
+            number: 6,
             type: 'sentence-completion',
             instructions: 'Choose NO MORE THAN TWO WORDS from the passage.',
             text: 'Currently, vertical farming is largely limited to luxury, rapid-maturing items such as culinary herbs, salad leaves, and _______.',
@@ -111,7 +101,7 @@ export const READING_TESTS: ReadingTest[] = [
         ]
       },
       {
-        id: 'p2',
+        id: 'p2-t1',
         number: 2,
         title: 'Biomimicry: Engineering Inspired by Nature',
         subtitle: 'How millions of years of evolutionary trial and error are unlocking breakthroughs in architecture, transportation, and materials science.',
@@ -143,10 +133,10 @@ export const READING_TESTS: ReadingTest[] = [
         ],
         questions: [
           {
-            id: 'q8',
-            number: 8,
+            id: 't1-q7',
+            number: 7,
             type: 'matching-headings',
-            instructions: 'Reading Passage 2 has six paragraphs, A-F. Choose the correct heading for each paragraph from the list of headings below: i. An avian answer to aerodynamic turbulence | ii. Microscopic textures preventing bacterial contamination | iii. The evolutionary database of natural solutions | iv. Termite-inspired passive architectural climate control | v. Financial risks in biomimetic investment | vi. A noise crisis caused by high-speed transit.',
+            instructions: 'Choose the correct heading for each paragraph from the list below.',
             text: 'Which heading corresponds to Paragraph B?',
             options: [
               'i. An avian answer to aerodynamic turbulence',
@@ -161,8 +151,8 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph B'
           },
           {
-            id: 'q9',
-            number: 9,
+            id: 't1-q8',
+            number: 8,
             type: 'matching-headings',
             instructions: 'Choose the correct heading for Paragraph C.',
             text: 'Which heading corresponds to Paragraph C?',
@@ -179,26 +169,8 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph C'
           },
           {
-            id: 'q10',
-            number: 10,
-            type: 'matching-headings',
-            instructions: 'Choose the correct heading for Paragraph E.',
-            text: 'Which heading corresponds to Paragraph E?',
-            options: [
-              'i. An avian answer to aerodynamic turbulence',
-              'ii. Microscopic textures preventing bacterial contamination',
-              'iii. The evolutionary database of natural solutions',
-              'iv. Termite-inspired passive architectural climate control',
-              'v. Financial risks in biomimetic investment',
-              'vi. A noise crisis caused by high-speed transit'
-            ],
-            correctAnswer: 'iv. Termite-inspired passive architectural climate control',
-            explanation: 'Paragraph E explains how convective thermodynamic chimneys inspired by termite mounds chilled the Eastgate Centre using 90% less energy.',
-            passageAnchor: 'Paragraph E'
-          },
-          {
-            id: 'q11',
-            number: 11,
+            id: 't1-q9',
+            number: 9,
             type: 'multiple-choice',
             instructions: 'Choose the correct letter, A, B, C, or D.',
             text: 'What prompted Japanese rail engineers to redesign the nose of the Shinkansen train?',
@@ -213,8 +185,8 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph B'
           },
           {
-            id: 'q12',
-            number: 12,
+            id: 't1-q10',
+            number: 10,
             type: 'multiple-choice',
             instructions: 'Choose the correct letter, A, B, C, or D.',
             text: 'How does shark skin prevent bacterial biofilm accumulation according to Paragraph F?',
@@ -231,7 +203,7 @@ export const READING_TESTS: ReadingTest[] = [
         ]
       },
       {
-        id: 'p3',
+        id: 'p3-t1',
         number: 3,
         title: 'The Linguistic Ecology of Endangered Languages',
         subtitle: 'Why the accelerating disappearance of indigenous idioms threatens collective human knowledge and biodiversity science.',
@@ -259,18 +231,18 @@ export const READING_TESTS: ReadingTest[] = [
         ],
         questions: [
           {
-            id: 'q13',
-            number: 13,
+            id: 't1-q11',
+            number: 11,
             type: 'yes-no-not-given',
-            instructions: 'Do the following statements agree with the views of the writer in Reading Passage 3? Write YES if the statement agrees with the views of the writer, NO if the statement contradicts the views of the writer, or NOT GIVEN if it is impossible to say what the writer thinks about this.',
+            instructions: 'Do the following statements agree with the views of the writer? Write YES, NO, or NOT GIVEN.',
             text: 'Global linguistic extinction is currently occurring at a significantly faster rate than in previous historical eras.',
             correctAnswer: 'YES',
             explanation: 'Paragraph A states: "This linguistic attrition is unfolding at a tempo unprecedented in recorded history: on average, an indigenous language vanishes every fortnight..."',
             passageAnchor: 'Paragraph A'
           },
           {
-            id: 'q14',
-            number: 14,
+            id: 't1-q12',
+            number: 12,
             type: 'yes-no-not-given',
             instructions: 'Write YES, NO, or NOT GIVEN.',
             text: 'The author agrees that having a single global language would improve human life without any negative consequences.',
@@ -279,39 +251,483 @@ export const READING_TESTS: ReadingTest[] = [
             passageAnchor: 'Paragraph B'
           },
           {
-            id: 'q15',
-            number: 15,
-            type: 'yes-no-not-given',
-            instructions: 'Write YES, NO, or NOT GIVEN.',
-            text: 'Indigenous plant classifications can capture practical medical information omitted by modern Western botanical terms.',
-            correctAnswer: 'YES',
-            explanation: 'Paragraph C states that Amazonian languages classify plants by "therapeutic biochemical interactions... When a language withers, the unique empirical pharmacology possessed by its community is often permanently extinguished before modern botanists can record or synthesize its active medicinal compounds."',
-            passageAnchor: 'Paragraph C'
-          },
-          {
-            id: 'q16',
-            number: 16,
-            type: 'multiple-choice',
-            instructions: 'Choose the correct letter, A, B, C, or D.',
-            text: 'What makes spatial orientation in the Guugu Yimithirr language remarkable?',
-            options: [
-              'A. It relies entirely on cardinal compass directions rather than relative terms like left or right.',
-              'B. It only identifies landmarks that are visible from the coastline.',
-              'C. It uses egocentric bodily coordinates instead of maps.',
-              'D. It has no grammatical tense to express direction.'
-            ],
-            correctAnswer: 'A',
-            explanation: 'Paragraph D states that speakers do not use egocentric coordinates like left/right, but anchor every orientation to absolute cardinal directions (north, south, east, west).',
-            passageAnchor: 'Paragraph D'
-          },
-          {
-            id: 'q17',
-            number: 17,
+            id: 't1-q13',
+            number: 13,
             type: 'sentence-completion',
             instructions: 'Complete the sentence below. Choose NO MORE THAN TWO WORDS from the passage for each answer.',
             text: 'The Maori revival initiative utilized an immersion model known in English as _______.',
             correctAnswer: 'Language Nests',
-            explanation: 'Paragraph E states: "The Maori of New Zealand pioneered the "Kohanga Reo" (Language Nests) model, immersing infants and young children in immersion preschools..."',
+            explanation: 'Paragraph E states: "The Maori of New Zealand pioneered the Kohanga Reo (Language Nests) model, immersing infants and young children in immersion preschools..."',
+            passageAnchor: 'Paragraph E'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'academic-test-02',
+    title: 'Cambridge Academic Practice Test 2',
+    description: 'A full examination exploring ancient Roman packaging archaeology, cognitive psychology of deep work, and solar geoengineering.',
+    passages: [
+      {
+        id: 'p1-t2',
+        number: 1,
+        title: 'The Roman Amphora: Packaging the Ancient World',
+        subtitle: 'How standardized ceramic containers fueled the Mediterranean economy and left an indelible archaeological fingerprint.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'For modern consumers, cardboard boxes and shipping containers represent the ubiquitous vessels of global logistics. In the classical antiquity of the Mediterranean, that role was performed almost exclusively by the terracotta amphora. Designed with a pointed base, a slender neck, and two opposing vertical handles, amphorae were manufactured by the tens of millions to store and transport liquid merchandise across maritime trade networks. Their primary cargoes included olive oil, wine, defrutum (concentrated grape syrup), and garum, the fermented fish condiment that defined Roman culinary culture.'
+          },
+          {
+            label: 'B',
+            text: 'The ergonomic design of the amphora was masterfully calibrated for maritime shipping. The pointed base served a dual functional purpose: it functioned as a sturdy third handle when handlers tipped the heavy vessel to pour, and it allowed dockworkers to wedge amphorae snugly into layers of loose sand in the cargo holds of merchant ships. By interlocking the handles and bases across several tiers, Roman shipmasters prevented catastrophic cargo shifts in rough seas, ensuring maximum volumetric density within wooden hulls.'
+          },
+          {
+            label: 'C',
+            text: 'Because terra-cotta is chemically inert and highly durable, broken amphora fragments do not degrade in acidic soil or underwater shipwrecks. Instead, they provide archaeologists with an extraordinary record of ancient economic dynamics. The ultimate testament to Roman container logistics is Monte Testaccio in Rome—an artificial hill rising over 35 meters high with a perimeter exceeding one kilometer. It is composed entirely of an estimated 53 million discarded olive oil amphorae, predominantly the Dressel 20 typology originating from the Guadalquivir river valley in Roman Hispania (modern Andalusia).'
+          },
+          {
+            label: 'D',
+            text: 'Unlike wine amphorae, which could occasionally be washed, relined with pine pitch, and reused, olive oil containers could not be repurposed. The porous clay inevitably absorbed rancid oil residues over time, contaminating any subsequent product. Consequently, upon reaching the river docks of the Tiber in Rome, each vessel was drained into large communal terracotta storage vats (dolia) and systematically smashed. Workers then carted the potsherds to Monte Testaccio, sprinkling quicklime over the mounds to neutralize noxious odors.'
+          },
+          {
+            label: 'E',
+            text: 'Crucially for economic historians, Roman amphorae carried sophisticated commercial labeling known as tituli picti. Painted in red or black ink on the vessel’s shoulder, these brushstrokes recorded the exact tare weight of the empty amphora, the net weight of oil, the name of the agricultural estate owner, the merchant contractor, and an official customs inspector stamp. This ancient precursor to the modern barcode proves that Roman imperial authorities exercised rigorous state monitoring over food standardization and taxation.'
+          }
+        ],
+        questions: [
+          {
+            id: 't2-q1',
+            number: 1,
+            type: 'true-false-not-given',
+            instructions: 'Do the following statements agree with the information given in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'The pointed base of an amphora helped dockworkers stabilize vessels inside ship cargo holds.',
+            correctAnswer: 'TRUE',
+            explanation: 'Paragraph B states that the pointed base "allowed dockworkers to wedge amphorae snugly into layers of loose sand in the cargo holds of merchant ships... preventing catastrophic cargo shifts."',
+            passageAnchor: 'Paragraph B'
+          },
+          {
+            id: 't2-q2',
+            number: 2,
+            type: 'true-false-not-given',
+            instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'Olive oil amphorae were routinely washed and reused to export Roman wine back to Hispania.',
+            correctAnswer: 'FALSE',
+            explanation: 'Paragraph D states: "Unlike wine amphorae, which could occasionally be washed... olive oil containers could not be repurposed. The porous clay inevitably absorbed rancid oil residues... each vessel was drained... and systematically smashed."',
+            passageAnchor: 'Paragraph D'
+          },
+          {
+            id: 't2-q3',
+            number: 3,
+            type: 'true-false-not-given',
+            instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'Workers at Monte Testaccio were paid higher wages than standard Roman dockworkers.',
+            correctAnswer: 'NOT GIVEN',
+            explanation: 'Paragraph D describes the quicklime and workers smashing potsherds, but there is no mention of wages or compensation.',
+            passageAnchor: 'Paragraph D'
+          },
+          {
+            id: 't2-q4',
+            number: 4,
+            type: 'sentence-completion',
+            instructions: 'Complete the sentence below. Choose NO MORE THAN TWO WORDS from the passage.',
+            text: 'Commercial labels painted with ink on Roman amphora shoulders were known as _______.',
+            correctAnswer: 'tituli picti',
+            explanation: 'Paragraph E states: "Roman amphorae carried sophisticated commercial labeling known as tituli picti."',
+            passageAnchor: 'Paragraph E'
+          },
+          {
+            id: 't2-q5',
+            number: 5,
+            type: 'sentence-completion',
+            instructions: 'Choose NO MORE THAN TWO WORDS from the passage.',
+            text: 'Workers scattered _______ over the discarded pottery mounds to suppress unpleasant smells.',
+            correctAnswer: 'quicklime',
+            explanation: 'Paragraph D notes that workers carted potsherds "sprinkling quicklime over the mounds to neutralize noxious odors."',
+            passageAnchor: 'Paragraph D'
+          }
+        ]
+      },
+      {
+        id: 'p2-t2',
+        number: 2,
+        title: 'The Cognitive Architecture of Deep Work',
+        subtitle: 'Why chronic task-switching and digital interruptions fragment human attentional capacity.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'In contemporary professional environments, hyper-connectivity is often misconstrued as synonymous with productivity. Knowledge workers spend an estimated 60 percent of their daily working hours navigating communicative overhead: checking messaging platforms, responding to asynchronous emails, and participating in recurring video conferences. However, emerging research in cognitive neuroscience reveals that this relentless fragmentation of focus imposes an invisible, devastating penalty on higher-order analytical thinking.'
+          },
+          {
+            label: 'B',
+            text: 'The primary neurological impediment underlying task-switching was conceptualized by business professor Sophie Leroy as "attention residue." Leroy demonstrated that when individuals transition from Task A to an unrelated Task B, their mental bandwidth does not switch cleanly or instantaneously. Instead, a substantial portion of cognitive resources remains fixated on thinking about the incomplete elements of Task A. Even a brief, five-second glance at an incoming inbox notification leaves an attentional shadow that compromises working memory and critical problem-solving for up to twenty minutes.'
+          },
+          {
+            label: 'C',
+            text: 'To counter this systemic degradation of cognitive throughput, computer scientist Cal Newport coined the paradigm of "Deep Work"—professional activities performed in a state of distraction-free concentration that push cognitive capabilities to their absolute limit. Newport distinguishes deep work from "shallow work," which encompasses non-cognitively demanding, logistical tasks often performed while semi-distracted. While shallow tasks prevent administrative paralysis, they rarely produce novel intellectual value or hard-to-replicate breakthroughs in competitive markets.'
+          },
+          {
+            label: 'D',
+            text: 'Neurological imaging indicates that deep work cultivates expertise through myelination. When a person concentrates intensely on a challenging conceptual skill without interruption, specific neural circuits fire repeatedly in isolated sequences. In response, oligodendrocytes—glial cells in the central nervous system—wrap layers of a fatty protein substance called myelin around the active axons. This myelin sheath acts as biological insulation, enabling electrical action potentials to travel up to one hundred times faster along the neural pathway, transforming difficult cognitive execution into fluid mastery.'
+          },
+          {
+            label: 'E',
+            text: 'Organizations, however, face architectural and cultural resistance when attempting to foster deep work. The pervasive adoption of open-plan office architectures, originally intended to encourage spontaneous serendipity and egalitarian collaboration, has in practice precipitated sensory overload and defensive headphone use. Longitudinal studies conducted by organizational psychologists indicate that workers in open environments experience 64 percent more interruptions and report significantly heightened cortisol levels compared to peers in closed, quiet workspaces.'
+          }
+        ],
+        questions: [
+          {
+            id: 't2-q6',
+            number: 6,
+            type: 'matching-headings',
+            instructions: 'Choose the correct heading for each paragraph from the options below.',
+            text: 'Which heading corresponds to Paragraph B?',
+            options: [
+              'i. The biological mechanism of skill insulation',
+              'ii. Attention residue and the cost of brief distractions',
+              'iii. The failure of collaborative open-plan architecture',
+              'iv. Misconceptions regarding continuous digital availability',
+              'v. Distinguishing high-value deep tasks from logistical duties'
+            ],
+            correctAnswer: 'ii. Attention residue and the cost of brief distractions',
+            explanation: 'Paragraph B explains Sophie Leroy’s research on attention residue when switching tasks.',
+            passageAnchor: 'Paragraph B'
+          },
+          {
+            id: 't2-q7',
+            number: 7,
+            type: 'matching-headings',
+            instructions: 'Choose the correct heading for Paragraph D.',
+            text: 'Which heading corresponds to Paragraph D?',
+            options: [
+              'i. The biological mechanism of skill insulation',
+              'ii. Attention residue and the cost of brief distractions',
+              'iii. The failure of collaborative open-plan architecture',
+              'iv. Misconceptions regarding continuous digital availability',
+              'v. Distinguishing high-value deep tasks from logistical duties'
+            ],
+            correctAnswer: 'i. The biological mechanism of skill insulation',
+            explanation: 'Paragraph D discusses oligodendrocytes producing myelin around active axons to insulate and accelerate neural signals.',
+            passageAnchor: 'Paragraph D'
+          },
+          {
+            id: 't2-q8',
+            number: 8,
+            type: 'multiple-choice',
+            instructions: 'Choose the correct letter, A, B, C, or D.',
+            text: 'According to Paragraph D, how does myelin improve brain performance during intensive concentration?',
+            options: [
+              'A. It stimulates the rapid growth of brand-new brain lobes.',
+              'B. It insulates neural pathways, allowing signals to travel significantly faster.',
+              'C. It reduces cortisol levels directly inside the spinal cord.',
+              'D. It eliminates the need for nighttime sleep cycles.'
+            ],
+            correctAnswer: 'B',
+            explanation: 'Paragraph D states that the myelin sheath "acts as biological insulation, enabling electrical action potentials to travel up to one hundred times faster along the neural pathway."',
+            passageAnchor: 'Paragraph D'
+          },
+          {
+            id: 't2-q9',
+            number: 9,
+            type: 'multiple-choice',
+            instructions: 'Choose the correct letter, A, B, C, or D.',
+            text: 'What does Paragraph E conclude about open-plan office layouts?',
+            options: [
+              'A. They have proven completely successful in boosting deep work hours.',
+              'B. They lower construction costs without any behavioral drawbacks.',
+              'C. They lead to frequent disruptions and elevated stress hormone indicators.',
+              'D. They encourage employees to abandon laptops in favor of paper.'
+            ],
+            correctAnswer: 'C',
+            explanation: 'Paragraph E states that open environments resulted in "64 percent more interruptions and report significantly heightened cortisol levels."',
+            passageAnchor: 'Paragraph E'
+          }
+        ]
+      },
+      {
+        id: 'p3-t2',
+        number: 3,
+        title: 'Solar Geoengineering: Cooling a Warming Planet',
+        subtitle: 'The technological possibilities, ecological uncertainties, and governance dilemmas of deliberate planetary climate intervention.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'As international greenhouse gas reduction initiatives struggle to maintain global warming within the 1.5-degree Celsius threshold established by the Paris Agreement, a once-taboo technological concept is ascending into serious scientific discourse: solar geoengineering. Also known as Solar Radiation Management (SRM), this suite of proposed techniques does not attempt to reduce atmospheric concentrations of heat-trapping carbon dioxide. Instead, it seeks to cool the planetary surface directly by reflecting a modest fraction (approximately one to two percent) of incoming solar irradiance back into outer space.'
+          },
+          {
+            label: 'B',
+            text: 'The most scientifically mature SRM proposal is Stratospheric Aerosol Injection (SAI), an approach modeled explicitly on natural volcanic analogs. When Mount Pinatubo erupted in the Philippines in June 1991, it ejected an estimated seventeen megatons of sulfur dioxide into the stratosphere. There, the gas reacted with water vapor to create a persistent veil of reflective sulfate aerosol droplets. Within months, this reflective layer circled the globe, depressing average planetary temperatures by approximately 0.5 degrees Celsius for nearly two years before the aerosols settled back into the troposphere.'
+          },
+          {
+            label: 'C',
+            text: 'Advocates of SAI argue that a fleet of purpose-engineered high-altitude aircraft could continuously inject synthetic aerosol precursors—such as sulfur dioxide or calcium carbonate particles—into the lower tropical stratosphere at altitudes exceeding twenty kilometers. Proponents calculate that the direct economic expense of such deployment would be astonishingly low compared to the multitrillion-dollar costs of unabated climate damage, providing humanity with a vital thermal cushion while green energy transitions mature.'
+          },
+          {
+            label: 'D',
+            text: 'Despite its apparent thermal efficacy, solar geoengineering is fraught with terrifying environmental side effects. Because SRM alters the radiation balance without scrubbing greenhouse gases from the atmosphere, it offers zero remediation for ocean acidification, which threatens the foundational food webs of marine biospheres. Furthermore, climate modeling conducted by the IPCC suggests that uneven planetary dimming could disrupt monsoon dynamics across South Asia and Sub-Saharan Africa, jeopardizing agricultural subsistence for hundreds of millions of vulnerable farmers.'
+          },
+          {
+            label: 'E',
+            text: 'The most perilous risk associated with SAI is known as "termination shock." If a future society initiates solar geoengineering and sustains it for decades while allowing greenhouse gas emissions to continue unabated, the planet will accumulate colossal latent heat. If that aerosol deployment is subsequently halted abruptly—due to geopolitical conflict, economic collapse, or sabotage—the artificial cooling veil would vanish within twelve to eighteen months. The resulting temperature rebound would unfold at a pace fifty times faster than current warming, causing catastrophic ecological collapse.'
+          }
+        ],
+        questions: [
+          {
+            id: 't2-q10',
+            number: 10,
+            type: 'yes-no-not-given',
+            instructions: 'Do the following statements agree with the views of the author? Write YES, NO, or NOT GIVEN.',
+            text: 'Solar Radiation Management directly cleans carbon dioxide molecules out of the atmosphere.',
+            correctAnswer: 'NO',
+            explanation: 'Paragraph A states: "this suite of proposed techniques does not attempt to reduce atmospheric concentrations of heat-trapping carbon dioxide. Instead, it seeks to cool the planetary surface directly by reflecting... solar irradiance back into outer space."',
+            passageAnchor: 'Paragraph A'
+          },
+          {
+            id: 't2-q11',
+            number: 11,
+            type: 'yes-no-not-given',
+            instructions: 'Write YES, NO, or NOT GIVEN.',
+            text: 'The 1991 eruption of Mount Pinatubo resulted in a temporary decrease in average global temperatures.',
+            correctAnswer: 'YES',
+            explanation: 'Paragraph B states that Mount Pinatubo aerosols "circled the globe, depressing average planetary temperatures by approximately 0.5 degrees Celsius for nearly two years."',
+            passageAnchor: 'Paragraph B'
+          },
+          {
+            id: 't2-q12',
+            number: 12,
+            type: 'yes-no-not-given',
+            instructions: 'Write YES, NO, or NOT GIVEN.',
+            text: 'The United Nations has already signed a treaty establishing an international flight fleet for sulfur injection.',
+            correctAnswer: 'NOT GIVEN',
+            explanation: 'Paragraph C discusses what proponents argue could be done, but there is no mention of any signed UN treaty or operational flight fleet.',
+            passageAnchor: 'Paragraph C'
+          },
+          {
+            id: 't2-q13',
+            number: 13,
+            type: 'sentence-completion',
+            instructions: 'Complete the sentence below. Choose NO MORE THAN TWO WORDS from the passage.',
+            text: 'The catastrophic rapid warming that would occur if aerosol spraying suddenly stopped is called _______.',
+            correctAnswer: 'termination shock',
+            explanation: 'Paragraph E states: "The most perilous risk associated with SAI is known as termination shock."',
+            passageAnchor: 'Paragraph E'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'academic-test-03',
+    title: 'Cambridge Academic Practice Test 3',
+    description: 'A full examination investigating fungal mycelium networks, the evolution of precision timekeeping, and the bilingual brain.',
+    passages: [
+      {
+        id: 'p1-t3',
+        number: 1,
+        title: 'The Secrets of Mycelium: Nature’s Subterranean Web',
+        subtitle: 'How expansive fungal networks beneath the forest floor sustain plant life and inspire next-generation bio-materials.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'Beneath the leaf litter of forest floors across the globe lies an intricate, living network of microscopic fungal threads known as mycelium. While mushrooms are the visible, reproductive fruiting bodies of fungi, they represent merely the ephemeral tip of a subterranean biological iceberg. A single cubic inch of fertile topsoil can contain over eight miles of mycelial hyphae, branching continuously through microscopic soil pores to form vast, interconnected biological webs that span entire ecosystems.'
+          },
+          {
+            label: 'B',
+            text: 'For decades, classical botanical dogma viewed forest trees as solitary competitors vying fiercely for sunlight, soil moisture, and mineral nutrients. However, groundbreaking ecological field research conducted by Dr. Suzanne Simard at the University of British Columbia revealed that forests operate as collaborative super-organisms linked by mycorrhizal fungi. Through these mutualistic networks, fungal hyphae envelop and penetrate tree root cells, supplying essential soil minerals like phosphorus and nitrogen in exchange for carbon-rich sugars synthesized through photosynthesis.'
+          },
+          {
+            label: 'C',
+            text: 'More astonishingly, Simard demonstrated that mycorrhizal networks facilitate dynamic resource redistribution among diverse plant species. During summer months, mature Douglas fir trees in deep shade receive carbon subsidies via fungal channels from neighboring paper birch trees basking in full sunlight. In autumn, when birch trees shed their foliage, the directional transfer reverses, with firs transferring nutrients back to the dormant birches. Fungi also act as biochemical communication conduits: when a tree is attacked by parasitic aphids, it transmits chemical alarm signals through the mycelium, prompting neighboring trees to preemptively synthesize protective defensive tannins.'
+          },
+          {
+            label: 'D',
+            text: 'Capitalizing on the unique structural properties of mycelium, modern bio-engineers are utilizing fungi to develop sustainable industrial materials designed to supplant plastic polymers and synthetic styrofoam. By inoculating agricultural waste products—such as hemp husks, corn stalks, or sawdust—with fungal strains, the mycelium digests the organic matter over several days, binding the fibers into a dense, solid composite matrix. Once baked at high temperatures to halt further biological growth, the resulting material is lightweight, water-resistant, completely fire-retardant, and fully biodegradable within months when composted.'
+          },
+          {
+            label: 'E',
+            text: 'In the construction sector, architectural innovators are investigating mycelium bricks as self-insulating, carbon-negative building blocks. Unlike concrete, the manufacturing of which generates approximately eight percent of worldwide greenhouse gas emissions, mycelium composites sequester carbon inside their cellular structures throughout cultivation. As society confronts acute landfill crises and escalating carbon targets, the subterranean genius of the fungal kingdom is offering an elegant paradigm of regenerative industrial design.'
+          }
+        ],
+        questions: [
+          {
+            id: 't3-q1',
+            number: 1,
+            type: 'true-false-not-given',
+            instructions: 'Do the following statements agree with the information in Reading Passage 1? Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'Mushrooms represent the largest and most enduring portion of a fungus’s physical mass.',
+            correctAnswer: 'FALSE',
+            explanation: 'Paragraph A states that mushrooms are "merely the ephemeral tip of a subterranean biological iceberg", while mycelium constitutes the vast majority of the organism.',
+            passageAnchor: 'Paragraph A'
+          },
+          {
+            id: 't3-q2',
+            number: 2,
+            type: 'true-false-not-given',
+            instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'Mycorrhizal fungi receive carbon sugars produced by trees during photosynthesis.',
+            correctAnswer: 'TRUE',
+            explanation: 'Paragraph B explicitly confirms: "supplying essential soil minerals... in exchange for carbon-rich sugars synthesized through photosynthesis."',
+            passageAnchor: 'Paragraph B'
+          },
+          {
+            id: 't3-q3',
+            number: 3,
+            type: 'true-false-not-given',
+            instructions: 'Write TRUE, FALSE, or NOT GIVEN.',
+            text: 'Trees attacked by pests can warn adjacent trees through mycelial communication channels.',
+            correctAnswer: 'TRUE',
+            explanation: 'Paragraph C states: "when a tree is attacked by parasitic aphids, it transmits chemical alarm signals through the mycelium, prompting neighboring trees to preemptively synthesize protective defensive tannins."',
+            passageAnchor: 'Paragraph C'
+          },
+          {
+            id: 't3-q4',
+            number: 4,
+            type: 'sentence-completion',
+            instructions: 'Complete the sentence below. Choose NO MORE THAN TWO WORDS from the passage.',
+            text: 'Mycelium composites are baked at high temperatures to stop any further _______ before commercial use.',
+            correctAnswer: 'biological growth',
+            explanation: 'Paragraph D notes: "Once baked at high temperatures to halt further biological growth, the resulting material is lightweight..."',
+            passageAnchor: 'Paragraph D'
+          }
+        ]
+      },
+      {
+        id: 'p2-t3',
+        number: 2,
+        title: 'The Evolution of Chronometry: From Sundials to Atomic Clocks',
+        subtitle: 'How humanity’s obsessive quest to divide the day into uniform intervals revolutionized navigation and quantum physics.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'For the vast majority of human history, the passage of time was marked strictly by the apparent motion of celestial bodies across the horizon. Sundials in ancient Mesopotamia and Egypt tracked diurnal intervals using shadow lengths, while water clocks (clepsydras) measured nocturnal durations through the regulated drip of liquid through calibrated orifices. However, these rudimentary chronometers suffered from severe operational vulnerabilities: sundials were useless on overcast days, and water clocks froze during winter or experienced fluctuating flow rates caused by temperature-induced viscosity shifts.'
+          },
+          {
+            label: 'B',
+            text: 'The dawn of mechanical timekeeping commenced in fourteenth-century medieval Europe with the invention of the verge-and-foliot escapement. Constructed within church bell towers to coordinate monastic prayer routines, these early mechanical weight-driven clocks replaced fluid flow with mechanical oscillation. Yet, because their oscillating foliot balance bars lacked a natural resonant frequency, their timing varied by up to half an hour per day, necessitating frequent daily recalibration against noon solar shadows.'
+          },
+          {
+            label: 'C',
+            text: 'A profound leap in precision arrived in 1656 when Dutch polymath Christiaan Huygens adapted Galileo Galilei’s astronomical observations to construct the first pendulum clock. Galileo had noted the isochronism of the pendulum—the remarkable property whereby a swinging pendulum takes virtually the identical amount of time to complete an arc regardless of the amplitude of the swing. Huygens’ pendulum reduced daily timing inaccuracies from thirty minutes down to less than ten seconds, establishing a rigorous new baseline for astronomical observation and scientific experimentation.'
+          },
+          {
+            label: 'D',
+            text: 'However, pendulum clocks were strictly terrestrial devices; the pitching and rolling of a sailing vessel at sea disrupted the delicate gravitational swing of the pendulum, rendering it completely useless for maritime navigation. The inability to determine precise time at sea precipitated devastating maritime catastrophes, as navigators could determine latitude by celestial altitudes but had no reliable method to calculate longitude. This crisis led the British Parliament to pass the Longitude Act of 1714, offering a colossal prize of 20,000 pounds for a solution.'
+          },
+          {
+            label: 'E',
+            text: 'The prize was ultimately claimed by Yorkshire carpenter and self-taught horologist John Harrison. Between 1730 and 1761, Harrison designed a series of marine chronometers, culminating in the masterpiece known as H4. Harrison bypassed gravity altogether by employing fast-beating coiled balance springs, temperature-compensating bimetallic strips, and jewel bearings that operated without friction-inducing oil lubrication. On a transatlantic voyage to Jamaica in 1761, Harrison’s H4 lost only 5.1 seconds over eighty-one days, revolutionizing global maritime cartography.'
+          }
+        ],
+        questions: [
+          {
+            id: 't3-q5',
+            number: 5,
+            type: 'matching-headings',
+            instructions: 'Choose the correct heading for each paragraph from the options below.',
+            text: 'Which heading corresponds to Paragraph C?',
+            options: [
+              'i. The maritime longitude crisis and parliament reward',
+              'ii. Early medieval escapements and their inaccuracies',
+              'iii. The breakthrough of the isochronous pendulum',
+              'iv. Harrison’s mechanical masterpiece for sea voyage',
+              'v. Environmental limitations of celestial and hydraulic timing'
+            ],
+            correctAnswer: 'iii. The breakthrough of the isochronous pendulum',
+            explanation: 'Paragraph C details Huygens’ pendulum clock based on Galileo’s observations of isochronism.',
+            passageAnchor: 'Paragraph C'
+          },
+          {
+            id: 't3-q6',
+            number: 6,
+            type: 'matching-headings',
+            instructions: 'Choose the correct heading for Paragraph E.',
+            text: 'Which heading corresponds to Paragraph E?',
+            options: [
+              'i. The maritime longitude crisis and parliament reward',
+              'ii. Early medieval escapements and their inaccuracies',
+              'iii. The breakthrough of the isochronous pendulum',
+              'iv. Harrison’s mechanical masterpiece for sea voyage',
+              'v. Environmental limitations of celestial and hydraulic timing'
+            ],
+            correctAnswer: 'iv. Harrison’s mechanical masterpiece for sea voyage',
+            explanation: 'Paragraph E details John Harrison and the H4 marine chronometer that solved longitude at sea.',
+            passageAnchor: 'Paragraph E'
+          },
+          {
+            id: 't3-q7',
+            number: 7,
+            type: 'multiple-choice',
+            instructions: 'Choose the correct letter, A, B, C, or D.',
+            text: 'Why could pendulum clocks not be used to calculate longitude aboard ocean-going ships?',
+            options: [
+              'A. The high humidity warped the clock’s wooden exterior casing.',
+              'B. The pitching motion of ocean waves disrupted the gravitational pendulum swing.',
+              'C. Ship compasses generated magnetic fields that froze the gears.',
+              'D. Pendulums required constant sunlight to maintain their swing.'
+            ],
+            correctAnswer: 'B',
+            explanation: 'Paragraph D states that "the pitching and rolling of a sailing vessel at sea disrupted the delicate gravitational swing of the pendulum."',
+            passageAnchor: 'Paragraph D'
+          }
+        ]
+      },
+      {
+        id: 'p3-t3',
+        number: 3,
+        title: 'The Neurobiology of the Bilingual Brain',
+        subtitle: 'How managing two linguistic systems reorganizes prefrontal brain architecture and delays cognitive decline.',
+        paragraphs: [
+          {
+            label: 'A',
+            text: 'Throughout the early and mid-twentieth century, educational theorists frequently warned parents and pedagogues that rearing children in a bilingual household would handicap intellectual development. It was hypothesized that forcing a young mind to acquire two linguistic vocabularies simultaneously would provoke cognitive interference, stunt verbal intelligence, and foster communicative confusion. Today, sophisticated functional neuroimaging and cognitive psychological research have entirely overturned this outdated consensus.'
+          },
+          {
+            label: 'B',
+            text: 'Far from creating confusion, managing two distinct linguistic systems acts as a lifelong mental workout that fortifies the brain’s executive function. Executive function comprises the suite of higher-order cognitive control processes directed by the prefrontal cortex: working memory, cognitive flexibility, selective attention, and inhibitory control. Whenever a bilingual individual speaks, both languages are activated simultaneously in the subconscious brain. To communicate in one language, the speaker must continuously suppress and inhibit the competing phonemes and lexical rules of the other language.'
+          },
+          {
+            label: 'C',
+            text: 'This continuous neural resistance training sharpens the dorsal anterior cingulate cortex and the basal ganglia—the brain areas responsible for conflict monitoring and goal-directed switching. In laboratory experiments utilizing the Stroop test or the Simon task, bilingual participants consistently outperform monolinguals of comparable educational backgrounds in resolving sensory conflict and ignoring irrelevant visual distractions, demonstrating superior cognitive agility.'
+          },
+          {
+            label: 'D',
+            text: 'Perhaps the most profound medical manifestation of bilingual neuro-architecture is its protective shield against neurodegenerative disorders. In pioneering clinical research directed by Dr. Ellen Bialystok at York University in Toronto, neuropsychologists analyzed the clinical records of hundreds of patients diagnosed with Alzheimer’s disease. Bialystok discovered that lifelong bilingual patients exhibited the clinical onset of dementia symptoms an average of four to five years later than demographically matched monolingual patients exhibiting identical stages of brain tissue degeneration.'
+          },
+          {
+            label: 'E',
+            text: 'Importantly, bilingualism does not prevent the physical neuropathology of Alzheimer’s, such as amyloid plaque accumulation or neurofibrillary tau tangles. Rather, it builds what neuroscientists term "cognitive reserve"—a dense, resilient neural redundancy that enables the brain to devise alternative compensatory synaptic pathways. Even when physical portions of brain matter suffer damage, the bilingual brain continues functioning normally long after a monolingual brain would experience cognitive impairment.'
+          }
+        ],
+        questions: [
+          {
+            id: 't3-q8',
+            number: 8,
+            type: 'yes-no-not-given',
+            instructions: 'Do the following statements agree with the views of the author? Write YES, NO, or NOT GIVEN.',
+            text: 'Early twentieth-century pedagogical theories encouraged bilingualism as a method to improve intellectual capacity.',
+            correctAnswer: 'NO',
+            explanation: 'Paragraph A states that early twentieth-century theorists "frequently warned parents and pedagogues that rearing children in a bilingual household would handicap intellectual development."',
+            passageAnchor: 'Paragraph A'
+          },
+          {
+            id: 't3-q9',
+            number: 9,
+            type: 'yes-no-not-given',
+            instructions: 'Write YES, NO, or NOT GIVEN.',
+            text: 'When a bilingual person speaks, their inactive second language is completely shut down by the brain.',
+            correctAnswer: 'NO',
+            explanation: 'Paragraph B explicitly clarifies: "Whenever a bilingual individual speaks, both languages are activated simultaneously in the subconscious brain."',
+            passageAnchor: 'Paragraph B'
+          },
+          {
+            id: 't3-q10',
+            number: 10,
+            type: 'sentence-completion',
+            instructions: 'Complete the sentence below. Choose NO MORE THAN TWO WORDS from the passage.',
+            text: 'The resilient neural redundancy that delays symptoms of dementia is referred to by neuroscientists as _______.',
+            correctAnswer: 'cognitive reserve',
+            explanation: 'Paragraph E states: "it builds what neuroscientists term cognitive reserve—a dense, resilient neural redundancy..."',
             passageAnchor: 'Paragraph E'
           }
         ]

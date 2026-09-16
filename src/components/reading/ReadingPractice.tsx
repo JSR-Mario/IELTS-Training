@@ -15,9 +15,10 @@ import {
 } from 'lucide-react';
 
 export const ReadingPractice: FC = () => {
-  const currentTest: ReadingTest = READING_TESTS[0];
+  const [selectedTestIndex, setSelectedTestIndex] = useState<number>(0);
+  const currentTest: ReadingTest = READING_TESTS[selectedTestIndex] || READING_TESTS[0];
   const [selectedPassageIndex, setSelectedPassageIndex] = useState<number>(0);
-  const activePassage: ReadingPassage = currentTest.passages[selectedPassageIndex];
+  const activePassage: ReadingPassage = currentTest.passages[selectedPassageIndex] || currentTest.passages[0];
 
   // User answers map: { [questionId]: answerString }
   const [answers, setAnswers] = useState<Record<string, string>>({});
@@ -89,25 +90,53 @@ export const ReadingPractice: FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
       {/* Top Header Controls */}
       <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-4 mb-6 flex flex-wrap items-center justify-between gap-4">
-        {/* Passage Switcher */}
-        <div className="flex items-center gap-2">
-          {currentTest.passages.map((p, idx) => (
-            <button
-              key={p.id}
-              onClick={() => {
-                setSelectedPassageIndex(idx);
-                setTimeRemaining(20 * 60);
-                setIsSubmitted(false);
-              }}
-              className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all ${
-                selectedPassageIndex === idx
-                  ? 'bg-indigo-600 text-white shadow-sm'
-                  : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-              }`}
-            >
-              Passage {p.number} ({p.questions.length} Qs)
-            </button>
-          ))}
+        {/* Test and Passage Switcher */}
+        <div className="flex flex-wrap items-center gap-3">
+          <div className="flex items-center gap-1 bg-slate-100 p-1 rounded-xl">
+            {READING_TESTS.map((test, tIdx) => (
+              <button
+                key={test.id}
+                onClick={() => {
+                  setSelectedTestIndex(tIdx);
+                  setSelectedPassageIndex(0);
+                  setAnswers({});
+                  setTimeRemaining(20 * 60);
+                  setElapsedSeconds(0);
+                  setIsSubmitted(false);
+                  setShowResultsModal(false);
+                }}
+                className={`px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                  selectedTestIndex === tIdx
+                    ? 'bg-indigo-600 text-white shadow-sm'
+                    : 'text-slate-700 hover:text-slate-900'
+                }`}
+              >
+                Test {tIdx + 1}
+              </button>
+            ))}
+          </div>
+
+          <div className="h-5 w-px bg-slate-200 hidden sm:block" />
+
+          <div className="flex items-center gap-1.5">
+            {currentTest.passages.map((p, idx) => (
+              <button
+                key={p.id}
+                onClick={() => {
+                  setSelectedPassageIndex(idx);
+                  setTimeRemaining(20 * 60);
+                  setIsSubmitted(false);
+                }}
+                className={`px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all cursor-pointer ${
+                  selectedPassageIndex === idx
+                    ? 'bg-slate-800 text-white shadow-sm'
+                    : 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                }`}
+              >
+                Passage {p.number} ({p.questions.length} Qs)
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* Timer & Controls */}

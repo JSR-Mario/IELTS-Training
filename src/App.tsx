@@ -19,16 +19,6 @@ export function App() {
         {activeTab === 'submissions' && <SubmissionsList />}
       </main>
 
-      <footer className="bg-slate-900 border-t border-slate-800 py-6 text-center text-xs text-slate-400">
-        <div className="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p>
-            IELTS Academic Training Hub &bull; 100% Local &bull; Cambridge Format Simulation
-          </p>
-          <p className="text-slate-400">
-            For Writing examiner evaluations, simply ask in Antigravity chat: <span className="text-indigo-400 font-mono">"calificame mi ultimo ensayo"</span>
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }
