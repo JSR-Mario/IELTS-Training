@@ -15,8 +15,12 @@ import {
   Check
 } from 'lucide-react';
 
-export const WritingPractice: FC = () => {
-  const [taskType, setTaskType] = useState<TaskType>('task2');
+interface WritingPracticeProps {
+  initialTaskType?: TaskType;
+}
+
+export const WritingPractice: FC<WritingPracticeProps> = ({ initialTaskType = 'task1' }) => {
+  const [taskType, setTaskType] = useState<TaskType>(initialTaskType);
   const promptsList = taskType === 'task1' ? TASK_1_PROMPTS : TASK_2_PROMPTS;
 
   // Completed prompt IDs loaded from stored submissions
