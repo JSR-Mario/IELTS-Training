@@ -67,7 +67,7 @@ export const ReadingPractice: FC = () => {
   // Timer
   const [timeRemaining, setTimeRemaining] = useState<number>(20 * 60); // 20 mins per passage
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
-  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
+  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false);
   const timerRef = useRef<any>(null);
 
   // Result & Review modal
@@ -98,7 +98,7 @@ export const ReadingPractice: FC = () => {
       setShowResultsModal(false);
       setTimeRemaining(20 * 60);
       setElapsedSeconds(0);
-      setIsTimerRunning(true);
+      setIsTimerRunning(false);
     }
   };
 
@@ -146,7 +146,7 @@ export const ReadingPractice: FC = () => {
     setAnswers({});
     setTimeRemaining(20 * 60);
     setElapsedSeconds(0);
-    setIsTimerRunning(true);
+    setIsTimerRunning(false);
 
     const nextPos = findNextReadingPosition(completedKeys);
     setPosition(nextPos);
