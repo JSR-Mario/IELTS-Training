@@ -1,16 +1,21 @@
 import type { FC } from 'react';
-import { PenTool, BookOpen, History, Award } from 'lucide-react';
+import { Home, PenTool, BookOpen, History, Award } from 'lucide-react';
+
+export type TabType = 'home' | 'writing' | 'reading' | 'submissions';
 
 interface NavbarProps {
-  activeTab: 'writing' | 'reading' | 'submissions';
-  onSelectTab: (tab: 'writing' | 'reading' | 'submissions') => void;
+  activeTab: TabType;
+  onSelectTab: (tab: TabType) => void;
 }
 
 export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
   return (
     <header className="bg-slate-900 border-b border-slate-800 text-white sticky top-0 z-30 shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-3">
+        <button
+          onClick={() => onSelectTab('home')}
+          className="flex items-center gap-3 text-left cursor-pointer focus:outline-none"
+        >
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-rose-600 to-indigo-600 flex items-center justify-center shadow-lg shadow-indigo-500/20">
             <Award className="w-5 h-5 text-white" />
           </div>
@@ -22,12 +27,24 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
               Band 9 Practice
             </span>
           </div>
-        </div>
+        </button>
 
         <nav className="flex items-center gap-1 sm:gap-2">
           <button
+            onClick={() => onSelectTab('home')}
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+              activeTab === 'home'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
+            }`}
+          >
+            <Home className="w-4 h-4" />
+            <span>Inicio</span>
+          </button>
+
+          <button
             onClick={() => onSelectTab('writing')}
-            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               activeTab === 'writing'
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
@@ -39,7 +56,7 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
 
           <button
             onClick={() => onSelectTab('reading')}
-            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               activeTab === 'reading'
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
@@ -51,7 +68,7 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
 
           <button
             onClick={() => onSelectTab('submissions')}
-            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
               activeTab === 'submissions'
                 ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
                 : 'text-slate-400 hover:text-white hover:bg-slate-800/70'

@@ -11,7 +11,6 @@ import {
   AlertCircle,
   Clock,
   FileText,
-  Lightbulb,
   Copy,
   Check,
   ChevronDown
@@ -34,9 +33,6 @@ export const WritingPractice: FC = () => {
   const [secondsRemaining, setSecondsRemaining] = useState<number>(initialSeconds);
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
   const [isRunning, setIsRunning] = useState<boolean>(false);
-
-  // Tips visibility
-  const [showTips, setShowTips] = useState<boolean>(false);
 
   // Submission states
   const [isSaving, setIsSaving] = useState<boolean>(false);
@@ -311,31 +307,7 @@ export const WritingPractice: FC = () => {
             </div>
           )}
 
-          {/* Tips Section */}
-          <div className="border border-slate-200 rounded-xl overflow-hidden">
-            <button
-              onClick={() => setShowTips(!showTips)}
-              className="w-full flex items-center justify-between p-3.5 bg-slate-50 hover:bg-slate-100 text-left transition-colors"
-            >
-              <div className="flex items-center gap-2 text-indigo-700 font-semibold text-sm">
-                <Lightbulb className="w-4 h-4" />
-                <span>Band 8+ Examiner Tips</span>
-              </div>
-              <ChevronDown
-                className={`w-4 h-4 text-slate-500 transition-transform ${showTips ? 'rotate-180' : ''}`}
-              />
-            </button>
-            {showTips && (
-              <div className="p-4 bg-indigo-50/50 border-t border-slate-200 space-y-2 text-xs text-slate-700">
-                {selectedPrompt.tips.map((tip, idx) => (
-                  <div key={idx} className="flex items-start gap-2">
-                    <span className="text-indigo-600 font-bold">•</span>
-                    <p>{tip}</p>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
+
         </div>
 
         {/* Right: Writing Area (7 cols) */}
@@ -414,7 +386,7 @@ export const WritingPractice: FC = () => {
 
             <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-4 mb-6">
               <h4 className="text-xs font-bold uppercase tracking-wider text-indigo-900 mb-1.5 flex items-center gap-1.5">
-                <Lightbulb className="w-3.5 h-3.5 text-indigo-600" /> Antigravity Examiner Evaluation
+                <CheckCircle2 className="w-3.5 h-3.5 text-indigo-600" /> Antigravity Examiner Evaluation
               </h4>
               <p className="text-xs text-indigo-800 mb-3 leading-relaxed">
                 Copy the prompt below and send it in our chat. I will review your submission file, evaluate your score across the 4 official IELTS criteria, and point out areas for improvement:
