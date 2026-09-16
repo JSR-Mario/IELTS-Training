@@ -148,7 +148,11 @@ export const ReadingPractice: FC = () => {
     setElapsedSeconds(0);
     setIsTimerRunning(false);
 
-    const nextPos = findNextReadingPosition(completedKeys);
+    const currentKey = `${currentTest.id}_${activePassage.id}`;
+    const updatedKeys = new Set(completedKeys);
+    updatedKeys.add(currentKey);
+
+    const nextPos = findNextReadingPosition(updatedKeys);
     setPosition(nextPos);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
