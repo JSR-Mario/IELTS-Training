@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { Home, PenTool, BookOpen, History, Award } from 'lucide-react';
+import { Home, Headphones, BookOpen, PenTool, History, Award, Layers, ExternalLink } from 'lucide-react';
 
-export type TabType = 'home' | 'writing' | 'reading' | 'submissions';
+export type TabType = 'home' | 'full-ielts' | 'reading' | 'writing' | 'submissions';
 
 interface NavbarProps {
   activeTab: TabType;
@@ -43,16 +43,28 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
           </button>
 
           <button
-            onClick={() => onSelectTab('writing')}
-            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
-              activeTab === 'writing'
-                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
-                : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
+            onClick={() => onSelectTab('full-ielts')}
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-bold transition-all cursor-pointer ${
+              activeTab === 'full-ielts'
+                ? 'bg-gradient-to-r from-amber-500 to-indigo-600 text-white shadow-md shadow-indigo-500/30'
+                : 'text-amber-300 hover:text-white hover:bg-amber-950/40 border border-amber-500/30'
             }`}
           >
-            <PenTool className="w-4 h-4" />
-            <span>Writing</span>
+            <Layers className="w-4 h-4 text-amber-400" />
+            <span>Full IELTS</span>
           </button>
+
+          <a
+            href="https://practicepteonline.com/listening-ielts-tests/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium text-slate-400 hover:text-white hover:bg-slate-800/70 transition-all cursor-pointer"
+            title="Abrir Tests Oficiales de Listening en PracticePTE (nueva pestaña)"
+          >
+            <Headphones className="w-4 h-4 text-sky-400" />
+            <span>Listening</span>
+            <ExternalLink className="w-3 h-3 text-slate-500" />
+          </a>
 
           <button
             onClick={() => onSelectTab('reading')}
@@ -64,6 +76,18 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
           >
             <BookOpen className="w-4 h-4" />
             <span>Reading</span>
+          </button>
+
+          <button
+            onClick={() => onSelectTab('writing')}
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+              activeTab === 'writing'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
+            }`}
+          >
+            <PenTool className="w-4 h-4" />
+            <span>Writing</span>
           </button>
 
           <button
