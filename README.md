@@ -22,6 +22,29 @@ Open your browser at `http://localhost:5173`.
 
 ---
 
+## Stopping the Application
+
+To stop the server:
+
+1. **In the terminal**:
+   - Press `Ctrl + C` in the terminal window where `npm run dev` is running.
+
+2. **If running in the background or if the port remains in use**:
+   - Free up port 5173:
+     ```bash
+     fuser -k 5173/tcp
+     ```
+     or:
+     ```bash
+     lsof -ti :5173 | xargs kill -9
+     ```
+   - Or terminate any lingering Vite process:
+     ```bash
+     pkill -f "vite"
+     ```
+
+---
+
 ## Writing Simulator
 
 - **Task 1 & Task 2 Support**:
