@@ -10,7 +10,7 @@ export interface WritingPrompt {
   timeLimitMinutes: number;
   chartDescription?: string;
   chartSvg?: string;
-  tips: string[];
+  tips?: string[];
 }
 
 export interface WritingSubmission {
