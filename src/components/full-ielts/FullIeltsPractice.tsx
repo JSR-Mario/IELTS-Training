@@ -32,7 +32,7 @@ const STAGE_CONFIG: Record<Stage, { name: string; duration: number; icon: any; o
 export const FullIeltsPractice: FC<FullIeltsPracticeProps> = ({ onNavigate }) => {
   const [currentStage, setCurrentStage] = useState<Stage>('listening');
   const [timerSeconds, setTimerSeconds] = useState<number>(STAGE_CONFIG['listening'].duration);
-  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false);
+  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
   const [totalElapsedSeconds, setTotalElapsedSeconds] = useState<number>(0);
   const timerRef = useRef<any>(null);
 
@@ -53,7 +53,7 @@ export const FullIeltsPractice: FC<FullIeltsPracticeProps> = ({ onNavigate }) =>
   };
 
   const handleAdvanceStage = (next: Stage) => {
-    setIsTimerRunning(false);
+    setIsTimerRunning(next !== 'completed');
     setCurrentStage(next);
     if (next !== 'completed') {
       setTimerSeconds(STAGE_CONFIG[next].duration);
@@ -63,7 +63,7 @@ export const FullIeltsPractice: FC<FullIeltsPracticeProps> = ({ onNavigate }) =>
 
   const handleResetFullTest = () => {
     if (window.confirm('¿Deseas reiniciar el simulacro completo desde la seccion 1 (Listening)?')) {
-      setIsTimerRunning(false);
+      setIsTimerRunning(true);
       setCurrentStage('listening');
       setTimerSeconds(STAGE_CONFIG['listening'].duration);
       setTotalElapsedSeconds(0);

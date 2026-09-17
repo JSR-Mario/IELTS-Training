@@ -41,7 +41,7 @@ export const WritingPractice: FC<WritingPracticeProps> = ({ initialTaskType = 't
   const [initialSeconds, setInitialSeconds] = useState<number>(selectedPrompt.timeLimitMinutes * 60);
   const [secondsRemaining, setSecondsRemaining] = useState<number>(initialSeconds);
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
-  const [isRunning, setIsRunning] = useState<boolean>(false);
+  const [isRunning, setIsRunning] = useState<boolean>(true);
 
   // Submission states
   const [isSaving, setIsSaving] = useState<boolean>(false);
@@ -105,7 +105,7 @@ export const WritingPractice: FC<WritingPracticeProps> = ({ initialTaskType = 't
     setInitialSeconds(secs);
     setSecondsRemaining(secs);
     setElapsedSeconds(0);
-    setIsRunning(false);
+    setIsRunning(true);
   }, [selectedPrompt]);
 
   // Autosave content to localStorage

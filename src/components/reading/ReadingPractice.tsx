@@ -68,7 +68,7 @@ export const ReadingPractice: FC = () => {
   // 60-minute Official Exam Timer (3600 seconds)
   const [timeRemaining, setTimeRemaining] = useState<number>(60 * 60);
   const [elapsedSeconds, setElapsedSeconds] = useState<number>(0);
-  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false);
+  const [isTimerRunning, setIsTimerRunning] = useState<boolean>(true);
   const timerRef = useRef<any>(null);
 
   // Result & Review modal
@@ -109,7 +109,7 @@ export const ReadingPractice: FC = () => {
       setShowResultsModal(false);
       setTimeRemaining(60 * 60);
       setElapsedSeconds(0);
-      setIsTimerRunning(false);
+      setIsTimerRunning(true);
       setActivePassageIndex(0);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -168,7 +168,7 @@ export const ReadingPractice: FC = () => {
     setAnswers({});
     setTimeRemaining(60 * 60);
     setElapsedSeconds(0);
-    setIsTimerRunning(false);
+    setIsTimerRunning(true);
     setActivePassageIndex(0);
 
     const updatedCompleted = new Set(completedTestIds);
