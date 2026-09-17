@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { PenTool, BookOpen, Headphones, ArrowRight, CheckCircle2, Layers, ExternalLink, Clock } from 'lucide-react';
+import { PenTool, BookOpen, Headphones, ArrowRight, CheckCircle2, Layers, ExternalLink, Clock, Scale } from 'lucide-react';
 import type { TabType } from '../Navbar';
 
 interface HomePageProps {
@@ -54,6 +54,13 @@ export const HomePage: FC<HomePageProps> = ({ onNavigate }) => {
             >
               <PenTool className="w-4 h-4 text-violet-400" />
               <span>Writing</span>
+            </button>
+            <button
+              onClick={() => onNavigate('scoring')}
+              className="flex items-center gap-2 px-5 py-3.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 font-semibold text-sm transition-all cursor-pointer"
+            >
+              <Scale className="w-4 h-4 text-amber-400" />
+              <span>Baremos</span>
             </button>
           </div>
         </div>
@@ -251,6 +258,30 @@ export const HomePage: FC<HomePageProps> = ({ onNavigate }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Official Scoring Tables Banner */}
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-6 hover:border-slate-300 transition-all">
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+            <Scale className="w-6 h-6" />
+          </div>
+          <div>
+            <span className="text-xs font-bold uppercase tracking-wider text-amber-600">Guía de Evaluación Oficial</span>
+            <h3 className="text-xl font-bold text-slate-900 mt-0.5">Tablas de Conversión y Descriptores de Banda</h3>
+            <p className="text-xs sm:text-sm text-slate-600 mt-1 max-w-2xl">
+              Descubre cuántos aciertos necesitas exactamente para cada banda en Listening y Reading, las rúbricas oficiales de Writing y Speaking, y calcula tu Overall Band Score.
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={() => onNavigate('scoring')}
+          className="shrink-0 px-6 py-3 rounded-xl bg-slate-900 hover:bg-amber-600 text-white font-semibold text-xs sm:text-sm transition-colors flex items-center justify-center gap-2 cursor-pointer"
+        >
+          <span>Ver Tablas de Calificación</span>
+          <ArrowRight className="w-4 h-4" />
+        </button>
       </div>
     </div>
   );

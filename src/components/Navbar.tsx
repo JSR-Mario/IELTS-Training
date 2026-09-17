@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { Home, Headphones, BookOpen, PenTool, History, Award, Layers, ExternalLink } from 'lucide-react';
+import { Home, Headphones, BookOpen, PenTool, History, Award, Layers, ExternalLink, Scale } from 'lucide-react';
 
-export type TabType = 'home' | 'full-ielts' | 'reading' | 'writing' | 'submissions';
+export type TabType = 'home' | 'full-ielts' | 'reading' | 'writing' | 'scoring' | 'submissions';
 
 interface NavbarProps {
   activeTab: TabType;
@@ -88,6 +88,19 @@ export const Navbar: FC<NavbarProps> = ({ activeTab, onSelectTab }) => {
           >
             <PenTool className="w-4 h-4" />
             <span>Writing</span>
+          </button>
+
+          <button
+            onClick={() => onSelectTab('scoring')}
+            className={`flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer ${
+              activeTab === 'scoring'
+                ? 'bg-indigo-600 text-white shadow-md shadow-indigo-600/30'
+                : 'text-slate-400 hover:text-white hover:bg-slate-800/70'
+            }`}
+            title="Tablas de calificación oficiales y baremos"
+          >
+            <Scale className="w-4 h-4" />
+            <span>Baremos</span>
           </button>
 
           <button

@@ -4,6 +4,7 @@ import { HomePage } from './components/home/HomePage';
 import { FullIeltsPractice } from './components/full-ielts/FullIeltsPractice';
 import { WritingPractice } from './components/writing/WritingPractice';
 import { ReadingPractice } from './components/reading/ReadingPractice';
+import { ScoringTables } from './components/scoring/ScoringTables';
 import { SubmissionsList } from './components/submissions/SubmissionsList';
 
 export function App() {
@@ -18,6 +19,7 @@ export function App() {
         {activeTab === 'full-ielts' && <FullIeltsPractice onNavigate={setActiveTab} />}
         {activeTab === 'reading' && <ReadingPractice />}
         {activeTab === 'writing' && <WritingPractice />}
+        {activeTab === 'scoring' && <ScoringTables />}
         {activeTab === 'submissions' && <SubmissionsList />}
       </main>
 
