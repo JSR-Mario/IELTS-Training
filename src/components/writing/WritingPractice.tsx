@@ -507,6 +507,10 @@ export const WritingPractice: FC = () => {
             {/* Editor Textarea */}
             <textarea
               disabled={isSubmitted}
+              spellCheck={false}
+              autoCorrect="off"
+              autoCapitalize="off"
+              autoComplete="off"
               value={t1Content}
               onChange={e => setT1Content(e.target.value)}
               placeholder="Escribe tu reporte de Task 1 aquí... (Incluye introducción con paráfrasis, visión general / overview con las tendencias principales, y párrafos de detalles con datos comparativos específicos)."
@@ -581,6 +585,10 @@ export const WritingPractice: FC = () => {
             {/* Editor Textarea */}
             <textarea
               disabled={isSubmitted}
+              spellCheck={false}
+              autoCorrect="off"
+              autoCapitalize="off"
+              autoComplete="off"
               value={t2Content}
               onChange={e => setT2Content(e.target.value)}
               placeholder="Escribe tu ensayo académico de Task 2 aquí... (Asegúrate de justificar tus ideas con argumentos sólidos, conectores variados y vocabulario formal)."

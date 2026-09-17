@@ -517,6 +517,10 @@ export const ReadingPractice: FC = () => {
                         <input
                           type="text"
                           disabled={isSubmitted}
+                          spellCheck={false}
+                          autoCorrect="off"
+                          autoCapitalize="off"
+                          autoComplete="off"
                           value={userVal}
                           onChange={e => handleSelectAnswer(q.id, e.target.value)}
                           placeholder="Escribe la respuesta exacta del texto..."
